@@ -1,0 +1,20 @@
+﻿@page "/call-javascript-2"
+@using System.Runtime.InteropServices.JavaScript
+
+<h1>.NET JS Import/Export Interop 2 (Call JS)</h1>
+
+@(message is not null ? message : string.Empty)
+
+@code {
+    private string? message;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (OperatingSystem.IsBrowser())
+        {
+            await JSHost.ImportAsync("Interop3", "../js/interop3.js");
+
+            message = Interop3.GetWelcomeMessage();
+        }
+    }
+}
