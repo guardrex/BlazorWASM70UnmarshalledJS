@@ -1,15 +1,12 @@
 ﻿using System.Runtime.InteropServices.JavaScript;
 using System.Runtime.Versioning;
 
-namespace BlazorWASM70UnmarshalledJS.JavaScriptInterop
+namespace BlazorWASM70UnmarshalledJS.Pages
 {
     [SupportedOSPlatform("browser")]
-    public partial class Interop3
+    public partial class CallDotNet1
     {
-        [JSImport("getMessage", "Interop3")]
-        internal static partial string GetWelcomeMessage();
-
-        [JSImport("setMessage", "Interop3")]
+        [JSImport("setMessage", "CallDotNet1")]
         internal static partial void SetWelcomeMessage();
 
         [JSExport]

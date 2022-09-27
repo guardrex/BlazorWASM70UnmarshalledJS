@@ -1,5 +1,5 @@
 ﻿@page "/call-dotnet-2"
-@using System.Runtime.InteropServices.JavaScript
+@using BlazorWASM70UnmarshalledJS.JavaScriptInterop
 
 <h1>.NET JS Import/Export Interop 2 (Call .NET)</h1>
 
@@ -8,12 +8,10 @@
 </p>
 
 @code {
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    protected override void OnAfterRender(bool firstRender)
     {
         if (OperatingSystem.IsBrowser() && firstRender)
         {
-            await JSHost.ImportAsync("Interop3", "../js/interop3.js");
-
             Interop3.SetWelcomeMessage();
         }
     }

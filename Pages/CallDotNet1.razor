@@ -12,9 +12,9 @@
     {
         if (OperatingSystem.IsBrowser() && firstRender)
         {
-            await JSHost.ImportAsync("Interop2", "../Pages/CallDotNet1.razor.js");
+            await JSHost.ImportAsync("CallDotNet1", "../Pages/CallDotNet1.razor.js");
 
-            Interop2.SetWelcomeMessage();
+            SetWelcomeMessage();
         }
     }
 }

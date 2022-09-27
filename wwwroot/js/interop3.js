@@ -7,5 +7,5 @@ export async function setMessage() {
     var exports = await getAssemblyExports("BlazorWASM70UnmarshalledJS.dll");
 
     document.getElementById("result").innerText =
-        exports.Interop3.GetMessageFromDotnet();
+        exports.BlazorWASM70UnmarshalledJS.JavaScriptInterop.Interop3.GetMessageFromDotnet();
 }

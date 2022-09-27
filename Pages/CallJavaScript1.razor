@@ -12,9 +12,9 @@
     {
         if (OperatingSystem.IsBrowser())
         {
-            await JSHost.ImportAsync("Interop1", "../Pages/CallJavaScript1.razor.js");
+            await JSHost.ImportAsync("CallJavaScript1", "../Pages/CallJavaScript1.razor.js");
 
-            message = Interop1.GetWelcomeMessage();
+            message = GetWelcomeMessage();
         }
     }
 }

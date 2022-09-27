@@ -1,5 +1,5 @@
 ﻿@page "/call-javascript-2"
-@using System.Runtime.InteropServices.JavaScript
+@using BlazorWASM70UnmarshalledJS.JavaScriptInterop
 
 <h1>.NET JS Import/Export Interop 2 (Call JS)</h1>
 
@@ -8,12 +8,10 @@
 @code {
     private string? message;
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
         if (OperatingSystem.IsBrowser())
         {
-            await JSHost.ImportAsync("Interop3", "../js/interop3.js");
-
             message = Interop3.GetWelcomeMessage();
         }
     }

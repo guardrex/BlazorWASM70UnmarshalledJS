@@ -3,5 +3,5 @@
   var exports = await getAssemblyExports("BlazorWASM70UnmarshalledJS.dll");
 
   document.getElementById("result").innerText = 
-    exports.Interop2.GetMessageFromDotnet();
+    exports.BlazorWASM70UnmarshalledJS.Pages.CallDotNet1.GetMessageFromDotnet();
 }
