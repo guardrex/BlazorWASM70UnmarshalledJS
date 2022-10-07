@@ -12,7 +12,7 @@ namespace BlazorWASM70UnmarshalledJS.Pages
         [JSExport]
         internal static string GetMessageFromDotnet()
         {
-            return "¡Hola desde Blazor!";
+            return "Olá do Blazor!";
         }
     }
 }

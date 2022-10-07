@@ -12,7 +12,12 @@
     {
         if (OperatingSystem.IsBrowser())
         {
-            await JSHost.ImportAsync("CallJavaScript1", "../Pages/CallJavaScript1.razor.js");
+#if DEBUG
+            var url = "../Pages/CallJavaScript1.razor.js?bustCache="+Guid.NewGuid();
+#else
+            var url = "../Pages/CallJavaScript1.razor.js"
+#endif
+            await JSHost.ImportAsync("CallJavaScript1", url);
 
             message = GetWelcomeMessage();
         }
