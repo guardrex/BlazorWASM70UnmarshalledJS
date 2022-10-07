@@ -1,3 +1,3 @@
 ﻿export function getMessage() {
-  return '¡Hola desde Blazor!';
+    return 'Olá do Blazor!';
 }

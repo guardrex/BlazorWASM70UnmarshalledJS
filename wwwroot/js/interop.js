@@ -1,5 +1,5 @@
 ﻿export function getMessage() {
-    return '¡Hola desde Blazor!';
+    return 'Olá do Blazor!';
 }
 
 export async function setMessage() {
@@ -7,5 +7,5 @@ export async function setMessage() {
     var exports = await getAssemblyExports("BlazorWASM70UnmarshalledJS.dll");
 
     document.getElementById("result").innerText =
-        exports.BlazorWASM70UnmarshalledJS.JavaScriptInterop.Interop3.GetMessageFromDotnet();
+        exports.BlazorWASM70UnmarshalledJS.JavaScriptInterop.Interop.GetMessageFromDotnet();
 }
